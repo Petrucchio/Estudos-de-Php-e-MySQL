@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Cadastro de Usuário </title>
+<style>
+    #titulo {
+        display: inline-block;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid #c4c4c4;
+        width: 150px;
+        height: 25px;
+        margin: 1px;
+        margin-bottom: -5px;
+        text-align: center;
+        margin-left: 5px;
+    }
+    #titulo h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 4px;
+    }
+    .corpo-tela {
+      background-color: rgb(42, 190, 235);
+      width: 300px;
+      border-radius: 5px;
+      padding: 50px;
+      margin: 20px;
+      margin-top: 0;
+    }
+    align_right{
+        text-align: right;
+    }
+    align_left{
+        text-align: left;
+    }
+    p.groove {border-style: groove;}
+    </style>
+</head>
+<body>
+    <div id="titulo">
+        <h1 class="groove">
+            cadastro de informações
+        </h1>
+    </div>
+
+    <div class="corpo-tela">
+<form method="POST" action="efetuar_cadastro.php">
+    <align_right>
+    <p><label>Nome do cliente:</label><input type="text" name="nome" id="nome"></p>
+    <p><label>Número da nota fiscal:</label><input type="text" name="nf" id="nf"></p>
+    <p><label>Valor do concerto:</label><input type="number" name="valor" id="valor"></p>
+    </align_right>
+    <align_left>
+    <p>Categoria do equipamento:</p>
+    <p><input type="radio" name="categoria" id="impressora" value="1"><label>Impressora</laberl></p>
+    <p><input type="radio" name="categoria" id="monitor" value="2"><label>Monitor</laberl></p>
+    <p><input type="radio" name="categoria" id="placa_mae" value="3"><label>Placa_mãe</laberl></p>
+    <p><input type="radio" name="categoria" id="outros" value="4"><label>Outros</laberl></p>
+    </align_left>
+    <center><p><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" ></p></center>
+</form>
+</div>
+</body>
+</html>
